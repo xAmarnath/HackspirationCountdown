@@ -7,7 +7,7 @@
     <title>Hackspiration Countdown</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  
+
     <style>
         body {
             background-color: #000000;
@@ -29,7 +29,11 @@
 
         .countdown-text {
             color: #00FFFF;
-            font-size: 3rem;
+        }
+
+        .start-time-specifier {
+            color: #FF00FF;
+            text-shadow: 0 0 10px #FF00FF;
         }
 
         canvas {
@@ -49,7 +53,7 @@
 
         .above-particle-js-container-with-background {
             position: absolute;
-            padding: 32px;
+            padding: 24px;
             border-radius: 16px;
             background: #131721;
             border-bottom: 1px solid #000;
@@ -61,13 +65,14 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
-<body class="flex justify-center items-center min-h-screen">
+<body class="flex justify-center items-center min-h-screen relative">
     <div id="particles-js"></div>
-    <div class="above-particle-js-container-with-background">
+    <div class="above-particle-js-container-with-background w-11/12 md:w-3/4 lg:w-1/2 text-center">
         <div class="text-center p-4">
-            <h1 class="text-5xl neon-text mb-2">Hackspiration Hackathon</h1>
-            <p class="text-2xl text-gray-300 mb-4">Live In:</p>
-            <div id="countdown" class="text-4xl font-bold glow-border p-6 countdown-text"></div>
+            <h1 class="text-4xl sm:text-5xl neon-text mb-2">Hackspiration Hackathon</h1>
+            <p class="text-xl sm:text-2xl text-gray-300 mb-4">Live In:</p>
+            <div id="countdown" class="text-3xl sm:text-4xl font-bold glow-border p-4 sm:p-6 countdown-text"></div>
+            <p class="text-xl sm:text-2xl text-gray-300 mt-4">Starts on October 10, 2024 at 9:00 AM</p>
         </div>
     </div>
 
@@ -83,8 +88,8 @@
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             document.getElementById("countdown").innerHTML = `
-        ${hours}h ${minutes}m ${seconds}s
-      `;
+                ${hours}h ${minutes}m ${seconds}s
+            `;
 
             if (distance < 0) {
                 clearInterval(timerInterval);
@@ -205,6 +210,8 @@
             "retina_detect": true
         });
 
+
+        /* ---- stats.js config ---- */
 
         var count_particles, stats, update;
         stats = new Stats;
