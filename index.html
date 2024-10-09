@@ -60,6 +60,29 @@
             opacity: 0.8;
             z-index: 10001;
         }
+
+        .contact-section {
+            background: #131721;
+            border-top: 1px solid #000;
+            opacity: 0.8;
+            z-index: 10001;
+        }
+
+        .contact-section a {
+            color: #00FFFF;
+        }
+
+        .contact-section a:hover {
+            color: #FF00FF;
+        }
+
+        .contact-section a:active {
+            color: #FF00FF;
+        }
+
+        .contact-section a:focus {
+            color: #FF00FF;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
@@ -84,31 +107,41 @@
                         <p class="text-lg sm:text-xl text-gray-300 mb-6 font-medium">Please read the guidelines before
                             the
                             hackathon starts.</p>
-                        <ul class="text-left text-xs sm:text-lg font-light text-gray-300 space-y-4"
+                        <ul class="text-left text-md sm:text-lg font-light text-gray-300 space-y-4"
                             style="list-style-type: disc;">
                             <li class="hover:text-neon-blue transition duration-300 ease-in-out">
-                                <strong class="text-white font-bold">Registration:</strong> 8:30 AM - 8:45 AM (Teams should arrive
+                                <strong class="text-white font-bold">Registration:</strong> 8:30 AM - 8:45 AM (Teams
+                                should arrive
                                 on
                                 time.)
                             </li>
                             <li class="hover:text-neon-blue transition duration-300 ease-in-out">
-                                <strong class="text-white font-bold">Laptop Requirement:</strong> Teams must bring their own
+                                <strong class="text-white font-bold">Laptop Requirement:</strong> Teams must bring their
+                                own
                                 laptops.
                             </li>
                             <li class="hover:text-neon-blue transition duration-300 ease-in-out">
-                                <strong class="text-white font-bold">Idea Pitching:</strong> Topics will be provided at the venue.
+                                <strong class="text-white font-bold">Idea Pitching:</strong> Topics will be provided at
+                                the venue.
                                 Teams will have from 9:00 AM to 11:00 AM for Ideation.
                             </li>
                             <li class="hover:text-neon-blue transition duration-300 ease-in-out">
-                                <strong class="text-white font-bold">Selection for Next Round:</strong> The top 8 teams will be
+                                <strong class="text-white font-bold">First Round Evaluation:</strong> The evaluation
+                                will be carried out by the FOSS CSE Techincal Team from 11:00 AM to 12:30 PM.
+                            </li>
+                            <li class="hover:text-neon-blue transition duration-300 ease-in-out">
+                                <strong class="text-white font-bold">Selection for Next Round:</strong> The top 8 teams
+                                will be
                                 selected to proceed to the next round, which starts at 1:30 PM.
                             </li>
                             <li class="hover:text-neon-blue transition duration-300 ease-in-out">
-                                <strong class="text-white font-bold">Presentation Format:</strong> Each team is allowed to present
+                                <strong class="text-white font-bold">Presentation Format:</strong> Each team is allowed
+                                to present
                                 their ideas with the help of a PowerPoint presentation in round 2.
                             </li>
                             <li class="hover:text-neon-blue transition duration-300 ease-in-out">
-                                <strong class="text-white font-bold">Time Management:</strong> Effective time management is
+                                <strong class="text-white font-bold">Time Management:</strong> Effective time management
+                                is
                                 crucial
                                 for all presentations.
                             </li>
@@ -116,144 +149,182 @@
                     </div>
                 </div>
             </div>
+            <div class="above-particle-js-container-with-background w-11/12 md:w-3/4 lg:w-1/2 text-center">
+                <div class="text-center p-4">
+                    <h2 class="text-2xl sm:text-3xl neon-text mb-4">Prizes</h2>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-6 font-medium">Winners will be announced at the
+                        end of
+                        the
+                        hackathon.</p>
+                    <ul class="text-left text-md sm:text-lg font-light text-gray-300 space-y-4"
+                        style="list-style-type: disc;">
+                        <li class="hover:text-neon-blue transition duration-300 ease-in-out">
+                            <strong class="text-white font-bold">First Prize:</strong> 4000/-
+                        </li>
+                        <li class="hover:text-neon-blue transition duration-300 ease-in-out">
+                            <strong class="text-white font-bold">Second Prize:</strong> 2000/-
+                        </li>
+                        <li class="hover:text-neon-blue transition duration-300 ease-in-out">
+                            <strong class="text-white font-bold">Third Prize:</strong> 1000/-
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-section w-11/12 md:w-3/4 lg:w-1/2 text-center">
+                <div class="text-center p-4">
+                    <h2 class="text-2xl sm:text-3xl neon-text mb-4">Contact Us</h2>
+                    <ul class="text-left text-md sm:text-lg font-light text-gray-300 space-y-4"
+                        style="list-style-type: none;">
+                        <span class="contact-section space-y-4 text-center">
+                            <li class="hover:text-neon-blue transition duration-300 ease-in-out">
+                                <strong class="text-white font-bold">Augusto V:</strong> +91 1234567890
+                            </li>
+                            <li class="hover:text
+                            -neon-blue transition duration-300 ease-in-out">
+                                <strong class="text-white font-bold">Akshay:</strong> +91 0987654321
+                            </li>
+                        </span>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
 
 
-    <script>
-        const hackathonStart = new Date("October 10, 2024 09:00:00").getTime();
+        <script>
+            const hackathonStart = new Date("October 10, 2024 09:00:00").getTime();
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = hackathonStart - now;
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = hackathonStart - now;
 
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = `
+                document.getElementById("countdown").innerHTML = `
                 ${hours}h ${minutes}m ${seconds}s
             `;
 
-            if (distance < 0) {
-                clearInterval(timerInterval);
-                document.getElementById("countdown").innerHTML = "The hackathon has started!";
-            }
-        }
-
-        const timerInterval = setInterval(updateCountdown, 1000);
-
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 100,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#00FFFF"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#fff000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": true,
-                    "attract": {
-                        "enable": true,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("countdown").innerHTML = "The hackathon has started!";
                 }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
+            }
+
+            const timerInterval = setInterval(updateCountdown, 1000);
+
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 100,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
                         }
                     },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
+                    "color": {
+                        "value": "#00FFFF"
                     },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#fff000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
                     },
-                    "push": {
-                        "particles_nb": 4
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
                     },
-                    "remove": {
-                        "particles_nb": 2
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": true,
+                        "attract": {
+                            "enable": true,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
                     }
-                }
-            },
-            "retina_detect": true
-        });
-    </script>
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        </script>
 </body>
 
 </html>
