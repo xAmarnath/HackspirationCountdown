@@ -280,6 +280,11 @@
                 ${hours}h ${minutes}m ${seconds}s
             `;
 
+                if (distance < 24 * 60 * 60 * 1000) {
+                    document.getElementById("countdown").innerHTML = `The Hackathon has Ended!`;
+                    return;
+                }
+
                 if (distance < 0) {
                     clearInterval(timerInterval);
                     document.getElementById("countdown").innerHTML = "The hackathon has started!";
